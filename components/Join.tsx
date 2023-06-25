@@ -6,24 +6,10 @@ import emailjs from "@emailjs/browser";
 const Join = () => {
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = () => {
+    
 
-    emailjs
-      .sendForm(
-        "service_1bxr6u8",
-        "template_fqrzhu4",
-        form.current,
-        "KsDnFlhStfNqSOOO5"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+    
   };
   return (
     <div className="join flex px-8 gap-[10rem]" id="join-us">
@@ -39,7 +25,7 @@ const Join = () => {
         </div>
       </div>
       <div className="join__right">
-        <form ref={form} className="email-container" onSubmit={sendEmail}>
+        <form className="email-container" onSubmit={sendEmail}>
           <input
             type="email"
             name="user-email"
