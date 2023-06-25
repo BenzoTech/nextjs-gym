@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 
 const Hero = () => {
-  const transition = { type: "spring", duration: 3 };
   const mobile = window.innerWidth <= 768 ? true : false;
+  const transition = { type: "spring", duration: 3 };
   return (
     <div className="hero">
       <div className="blur hero__blur"></div>
